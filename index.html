@@ -103,7 +103,7 @@ const defs = [
  {name:'OSC 2 WAVE',short:'WAVE',value:0,type:'wave',hint:'TRI'},
  {name:'OSC 2 LEVEL',short:'LEVEL',value:0,type:'level',hint:'VOLUME'},
  {name:'ATTACK',short:'A',value:0,type:'adsr',hint:'0–2.0 SEC'},
- {name:'DECAY',short:'D',value:0,type:'adsr',hint:'0–2.0 SEC'},
+ {name:'DECAY',short:'D',value:0,type:'adsr',hint:'0–5.0 SEC'},
  {name:'SUSTAIN',short:'S',value:127,type:'sustain',hint:'LEVEL'},
  {name:'RELEASE',short:'R',value:0,type:'release',hint:'0–3.0 SEC'}
 ];
@@ -172,7 +172,7 @@ function renderKnob(k){
 }
 function waveIndex(i){return Math.min(3,Math.floor(state[i]/32));}
 function attack(){return state[4]/127*2;}
-function decay(){return state[5]/127*2;}
+function decay(){return state[5]/127*5;}
 function sustain(){return state[6]/127;}
 function release(){return state[7]/127*3;}
 function initAudio(){
